@@ -95,7 +95,6 @@ class Product(models.Model):
         verbose_name_plural = 'Products'
         ordering = ['name']
 
-
     @property
     def category(self):
         """Return category name."""
@@ -108,8 +107,6 @@ class ShoppingCart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.PositiveSmallIntegerField(default=1)
-    price = models.DecimalField(max_digits=PRODUCT_PRICE_MAX_DIGITS,
-                                decimal_places=PRODUCT_PRICE_DECIMAL_PLACES)
 
     def __str__(self):
         """Return product name."""

@@ -63,7 +63,13 @@ class SubCategorySerializer(serializers.ModelSerializer):
 class ShoppingCartSerializer(serializers.ModelSerializer):
     """Serializer for ShoppingCart model."""
 
+    user = serializers.ReadOnlyField(source='user.username')
+    product = serializers.ReadOnlyField(source='product.name')
+    price = serializers.DecimalField(source='product.price',
+                         max_digits=PRODUCT_PRICE_MAX_DIGITS,
+                         decimal_places=PRODUCT_PRICE_DECIMAL_PLACES)
+
     class Meta:
         """Meta class for ShoppingCartSerializer."""
         model = ShoppingCart
-        fields = ('id', 'user', 'product', 'quantity', 'price',)
+        fields = ('user', 'product', 'quantity', 'price',)

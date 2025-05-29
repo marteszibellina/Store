@@ -79,8 +79,8 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(ShoppingCart)
 class ShoppingCartAdmin(admin.ModelAdmin):
     """ShoppingCart admin."""
-    list_display = ('user', 'product', 'quantity', 'price')
-    search_fields = ('user', 'product', 'quantity', 'price')
+    list_display = ('user', 'product', 'quantity',)
+    search_fields = ('user', 'product', 'quantity',)
     empty_value_display = '-empty-'
 
 

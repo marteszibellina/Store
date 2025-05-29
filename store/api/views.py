@@ -82,26 +82,10 @@ def get_product_detail(self, category_slug, subcategory_slug, product_slug):
     return Response(serializer.data)
 
 
-    # @action(
-    #     detail=True,
-    #     methods=['get'],
-    #     permission_classes=[IsReadOnly],
-    #     url_path='product',
-    # )
-    # def get_product(self, request, slug):
-    #     """Product viewset."""
-    #     product = Product.objects.filter(subcategory_slug=slug)
-    #     serializer = ProductSerializer(product, many=True)
-    #     return Response(serializer.data, status=status.HTTP_200_OK)
+class ShoppingCartViewSet(viewsets.ModelViewSet):
+    """ShoppingCart viewset."""
 
-    # @action(
-    #     detail=True,
-    #     methods=['get'],
-    #     permission_classes=[IsReadOnly],
-    #     url_path='product_image',
-    # )
-    # def get_product_image(self, request, slug):
-    #     """ProductImage viewset."""
-    #     product_image = ProductImage.objects.filter(product_slug=slug)
-    #     serializer = ProductImageSerializer(product_image, many=True)
-    #     return Response(serializer.data, status=status.HTTP_200_OK)
+    queryset = ShoppingCart.objects.all()
+    serializer_class = ShoppingCartSerializer
+    permission_classes = (permissions.AllowAny,) # (IsAuthenticated,)
+    pagination_class = StandartPagination
