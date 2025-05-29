@@ -55,10 +55,12 @@ class ProductImage(models.Model):
     """ProductImage model."""
 
     image = models.ImageField('product-images',
+                              blank=True,
                               upload_to='product/images')
     order = models.PositiveSmallIntegerField(default=0,
                                              verbose_name='Order')
-    product = models.ForeignKey('Product', on_delete=models.CASCADE)
+    product = models.ForeignKey('Product', on_delete=models.CASCADE,
+                                related_name='product_images')
 
     def __str__(self):
         """Return product name."""
@@ -78,7 +80,8 @@ class Product(models.Model):
     slug = models.SlugField(max_length=PRODUCT_SLUG_LENGTH,
                             unique=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    subcategory = models.ForeignKey(SubCategory, on_delete=models.CASCADE)
+    subcategory = models.ForeignKey(SubCategory, on_delete=models.CASCADE,
+                                    related_name='products')
     price = models.DecimalField(max_digits=PRODUCT_PRICE_MAX_DIGITS,
                                 decimal_places=PRODUCT_PRICE_DECIMAL_PLACES)
 
@@ -91,6 +94,12 @@ class Product(models.Model):
         verbose_name = 'Product'
         verbose_name_plural = 'Products'
         ordering = ['name']
+
+
+    @property
+    def category(self):
+        """Return category name."""
+        return self.subcategory.category
 
 
 class ShoppingCart(models.Model):

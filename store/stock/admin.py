@@ -37,16 +37,21 @@ class ProductImageInline(admin.TabularInline):
 class ProductInline(admin.TabularInline):
     """Product inline."""
     model = Product
-    fields = ('name', 'slug', 'category', 'subcategory', 'price',)
+    fields = ('name', 'slug', 'get_category', 'subcategory', 'price',)
+    readonly_fields = ('get_category',)
     extra = 1
+
+    def get_category(self, obj):
+        return obj.sub_category.category.name
+    get_category.short_description = 'Category'
 
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     """Product admin."""
-    list_display = ('name', 'slug', 'category', 'subcategory', 'price')
+    list_display = ('name', 'slug', 'subcategory', 'price')
     search_fields = ('name', 'slug')
-    list_display_links = ('name', 'category')
+    list_display_links = ('name',)
     prepopulated_fields = {'slug': ('name',)}
     empty_value_display = '-empty-'
     inlines = (ProductImageInline, )
@@ -68,7 +73,7 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('name', 'slug')
     prepopulated_fields = {'slug': ('name',)}
     empty_value_display = '-empty-'
-    inlines = (SubCategoryInline, ProductInline)
+    inlines = (SubCategoryInline,)
 
 
 @admin.register(ShoppingCart)
