@@ -18,12 +18,39 @@ from django.conf.urls import include
 from django.urls import path
 from django.views.generic import TemplateView
 
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+
+from rest_framework.authtoken.views import obtain_auth_token
+from rest_framework.permissions import AllowAny
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title="Store API",
+        default_version='Version 0.1alpha',
+        description="API documentation for Store Project",
+        terms_of_service="https://www.google.com/policies/terms/",
+        contact=openapi.Contact(email="dmitry.sobolev90@yahoo.com"),
+        license=openapi.License(name="MIT License"),
+    ),
+    public=True,
+    permission_classes=(AllowAny,),
+)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
+    path('api/token/', obtain_auth_token, name='token'),
+
+    path(
+        'swagger/',
+        schema_view.with_ui('swagger', cache_timeout=0),
+        name='schema-swagger-ui',
+    ),
     path(
         'redoc/',
-        TemplateView.as_view(template_name='redoc.html'),
-        name='redoc'
+        schema_view.with_ui('redoc', cache_timeout=0),
+        name='schema-redoc',
     ),
 ]

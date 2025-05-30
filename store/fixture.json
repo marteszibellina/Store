@@ -1,0 +1,1455 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "authtoken",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "authtoken",
+    "model": "tokenproxy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "stock",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "stock",
+    "model": "product"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "stock",
+    "model": "subcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "stock",
+    "model": "shoppingcart"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "fields": {
+    "app_label": "stock",
+    "model": "productimage"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "35gw920rn2o8wz68i6g4gk2khhu1u7h6",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAGKGVcuvcMZBioVA0kpV0Z765NutDtf-_9lwi0rSVsPS9hTuIsQJx-t0j8yHUH6U711iS3ui5zlLsiD9rltaX8vBzu30GhXr41MypEMJoMK0oAyOgABoU0eQ1jNl6lPDmvR6YBnUk5auOtchSttla8P8jiNwo:1uKfhc:fVXX7mru0G5-seO1BmCB4vZTl8mhfHczjqnTGTqrgok",
+    "expire_date": "2025-06-12T16:01:56.436Z"
+  }
+},
+{
+  "model": "stock.category",
+  "pk": 1,
+  "fields": {
+    "name": "Бакалея",
+    "slug": "bakaleya",
+    "image": "category/images/TestImage_04_.png"
+  }
+},
+{
+  "model": "stock.category",
+  "pk": 2,
+  "fields": {
+    "name": "Молочное",
+    "slug": "molochnoe",
+    "image": "category/images/TestImage_05_.png"
+  }
+},
+{
+  "model": "stock.category",
+  "pk": 3,
+  "fields": {
+    "name": "Мясо",
+    "slug": "myaso",
+    "image": "category/images/TestImage_06_.png"
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 1,
+  "fields": {
+    "name": "Безлактозное",
+    "slug": "bezlaktoznoe",
+    "image": "subcategory/images/TestImage_01_.png",
+    "category": 2
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 2,
+  "fields": {
+    "name": "Лактозное",
+    "slug": "laktoznoe",
+    "image": "subcategory/images/TestImage_04_.png",
+    "category": 2
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 3,
+  "fields": {
+    "name": "Творог",
+    "slug": "tvorog",
+    "image": "subcategory/images/TestImage_02__j0QQPJv.png",
+    "category": 2
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 4,
+  "fields": {
+    "name": "Крупы",
+    "slug": "krupy",
+    "image": "subcategory/images/TestImage_03_.png",
+    "category": 1
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 5,
+  "fields": {
+    "name": "Макароны",
+    "slug": "makarony",
+    "image": "subcategory/images/TestImage_05_.png",
+    "category": 1
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 6,
+  "fields": {
+    "name": "Говядина",
+    "slug": "govyadina",
+    "image": "subcategory/images/TestImage_02_.png",
+    "category": 3
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 7,
+  "fields": {
+    "name": "Свинина",
+    "slug": "svinina",
+    "image": "subcategory/images/TestImage_01__O6iLjbH.png",
+    "category": 3
+  }
+},
+{
+  "model": "stock.subcategory",
+  "pk": 8,
+  "fields": {
+    "name": "Рыба",
+    "slug": "ryba",
+    "image": "subcategory/images/TestImage_06_.png",
+    "category": 3
+  }
+},
+{
+  "model": "stock.productimage",
+  "pk": 3,
+  "fields": {
+    "image": "product/images/TestImage_01_.png",
+    "order": 0,
+    "product": 1
+  }
+},
+{
+  "model": "stock.productimage",
+  "pk": 4,
+  "fields": {
+    "image": "product/images/TestImage_02_.png",
+    "order": 0,
+    "product": 1
+  }
+},
+{
+  "model": "stock.productimage",
+  "pk": 5,
+  "fields": {
+    "image": "product/images/TestImage_03_.png",
+    "order": 0,
+    "product": 1
+  }
+},
+{
+  "model": "stock.productimage",
+  "pk": 6,
+  "fields": {
+    "image": "product/images/TestImage_01__kgr3bjq.png",
+    "order": 0,
+    "product": 2
+  }
+},
+{
+  "model": "stock.productimage",
+  "pk": 7,
+  "fields": {
+    "image": "product/images/TestImage_02__nkZJvpp.png",
+    "order": 0,
+    "product": 2
+  }
+},
+{
+  "model": "stock.productimage",
+  "pk": 8,
+  "fields": {
+    "image": "product/images/TestImage_03__89ey6ED.png",
+    "order": 0,
+    "product": 2
+  }
+},
+{
+  "model": "stock.product",
+  "pk": 1,
+  "fields": {
+    "name": "Говядина",
+    "slug": "govyadina",
+    "subcategory": 6,
+    "price": "100.00"
+  }
+},
+{
+  "model": "stock.product",
+  "pk": 2,
+  "fields": {
+    "name": "Макароны \"Пёрышко\"",
+    "slug": "makarony-pyoryshko",
+    "subcategory": 5,
+    "price": "100.00"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Token",
+    "content_type": [
+      "authtoken",
+      "token"
+    ],
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Token",
+    "content_type": [
+      "authtoken",
+      "token"
+    ],
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": [
+      "authtoken",
+      "token"
+    ],
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Token",
+    "content_type": [
+      "authtoken",
+      "token"
+    ],
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add token",
+    "content_type": [
+      "authtoken",
+      "tokenproxy"
+    ],
+    "codename": "add_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change token",
+    "content_type": [
+      "authtoken",
+      "tokenproxy"
+    ],
+    "codename": "change_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete token",
+    "content_type": [
+      "authtoken",
+      "tokenproxy"
+    ],
+    "codename": "delete_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view token",
+    "content_type": [
+      "authtoken",
+      "tokenproxy"
+    ],
+    "codename": "view_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Category",
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Category",
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Category",
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Category",
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add Product",
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "codename": "add_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change Product",
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "codename": "change_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete Product",
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "codename": "delete_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view Product",
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "codename": "view_product"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add SubCategory",
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "codename": "add_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change SubCategory",
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "codename": "change_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete SubCategory",
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "codename": "delete_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view SubCategory",
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "codename": "view_subcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add shopping cart",
+    "content_type": [
+      "stock",
+      "shoppingcart"
+    ],
+    "codename": "add_shoppingcart"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change shopping cart",
+    "content_type": [
+      "stock",
+      "shoppingcart"
+    ],
+    "codename": "change_shoppingcart"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete shopping cart",
+    "content_type": [
+      "stock",
+      "shoppingcart"
+    ],
+    "codename": "delete_shoppingcart"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view shopping cart",
+    "content_type": [
+      "stock",
+      "shoppingcart"
+    ],
+    "codename": "view_shoppingcart"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can add ProductImage",
+    "content_type": [
+      "stock",
+      "productimage"
+    ],
+    "codename": "add_productimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can change ProductImage",
+    "content_type": [
+      "stock",
+      "productimage"
+    ],
+    "codename": "change_productimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can delete ProductImage",
+    "content_type": [
+      "stock",
+      "productimage"
+    ],
+    "codename": "delete_productimage"
+  }
+},
+{
+  "model": "auth.permission",
+  "fields": {
+    "name": "Can view ProductImage",
+    "content_type": [
+      "stock",
+      "productimage"
+    ],
+    "codename": "view_productimage"
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$260000$tcldb9AkqUyFnupZVbVNaQ$iqGu7Cj3B5WOWk6yWrRM/uv44hyxns6WQLrAckAG4bo=",
+    "last_login": "2025-05-29T16:01:56.432Z",
+    "is_superuser": true,
+    "username": "dmitry",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@fake.fake",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-05-27T09:58:47.151Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "stock.shoppingcart",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "dmitry"
+    ],
+    "product": 1,
+    "quantity": 2
+  }
+},
+{
+  "model": "stock.shoppingcart",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "dmitry"
+    ],
+    "product": 1,
+    "quantity": 2
+  }
+},
+{
+  "model": "stock.shoppingcart",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "dmitry"
+    ],
+    "product": 1,
+    "quantity": 2
+  }
+},
+{
+  "model": "stock.shoppingcart",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "dmitry"
+    ],
+    "product": 1,
+    "quantity": 2
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-05-29T09:27:47.044Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Бакалея",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-05-29T09:27:59.119Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Молочное",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-05-29T09:28:18.423Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Мясо",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-05-29T09:28:50.993Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "1",
+    "object_repr": "Молочное[20]:Безлактозное[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-05-29T09:29:04.497Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "2",
+    "object_repr": "Молочное[20]:Лактозное[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-05-29T09:29:17.653Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "3",
+    "object_repr": "Молочное[20]:Творог[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-05-29T09:29:30.602Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "4",
+    "object_repr": "Бакалея[20]:Крупы[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-05-29T09:29:41.361Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "5",
+    "object_repr": "Бакалея[20]:Макароны[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-05-29T09:30:35.740Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "6",
+    "object_repr": "Мясо[20]:Говядина[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-05-29T09:30:46.679Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "7",
+    "object_repr": "Мясо[20]:Свинина[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-05-29T09:30:55.185Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "8",
+    "object_repr": "Мясо[20]:Рыба[:20]",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-05-29T09:31:46.339Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Макароны \"Перышки\":100 of Бакалея:Безлактозное",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"ProductImage\", \"object\": \"\\u041c\\u0430\\u043a\\u0430\\u0440\\u043e\\u043d\\u044b \\\"\\u041f\\u0435\\u0440\\u044b\\u0448\\u043a\\u0438\\\": Order 0\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-05-29T09:32:31.070Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Макароны \"Перышки\":100.00 of Бакалея:Безлактозное",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-05-29T09:36:23.943Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "ham:100 of Мясо:Безлактозное",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"ProductImage\", \"object\": \"ham: Order 0\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-05-29T09:36:37.778Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "ham:100.00 of Мясо:Безлактозное",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-05-29T09:51:05.041Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Говядина:100 of Мясо:Говядина",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-05-29T11:13:13.438Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Макароны \"Пёрышко\":100 of Бакалея:Макароны",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-05-29T11:36:35.846Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "1",
+    "object_repr": "Молочное[20]:Безлактозное[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-05-29T11:36:46.507Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "6",
+    "object_repr": "Мясо[20]:Говядина[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-05-29T11:36:52.698Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "4",
+    "object_repr": "Бакалея[20]:Крупы[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-05-29T11:36:59.191Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "2",
+    "object_repr": "Молочное[20]:Лактозное[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-05-29T11:37:07.422Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "5",
+    "object_repr": "Бакалея[20]:Макароны[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-05-29T11:37:14.959Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "8",
+    "object_repr": "Мясо[20]:Рыба[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-05-29T11:37:21.267Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "7",
+    "object_repr": "Мясо[20]:Свинина[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-05-29T11:37:28.437Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "subcategory"
+    ],
+    "object_id": "3",
+    "object_repr": "Молочное[20]:Творог[:20]",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-05-29T11:37:49.503Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "1",
+    "object_repr": "Говядина:100.00 of Мясо:Говядина",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"ProductImage\", \"object\": \"\\u0413\\u043e\\u0432\\u044f\\u0434\\u0438\\u043d\\u0430: Order 0\"}}, {\"added\": {\"name\": \"ProductImage\", \"object\": \"\\u0413\\u043e\\u0432\\u044f\\u0434\\u0438\\u043d\\u0430: Order 0\"}}, {\"added\": {\"name\": \"ProductImage\", \"object\": \"\\u0413\\u043e\\u0432\\u044f\\u0434\\u0438\\u043d\\u0430: Order 0\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-05-29T11:38:01.289Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "product"
+    ],
+    "object_id": "2",
+    "object_repr": "Макароны \"Пёрышко\":100.00 of Бакалея:Макароны",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"ProductImage\", \"object\": \"\\u041c\\u0430\\u043a\\u0430\\u0440\\u043e\\u043d\\u044b \\\"\\u041f\\u0451\\u0440\\u044b\\u0448\\u043a\\u043e\\\": Order 0\"}}, {\"added\": {\"name\": \"ProductImage\", \"object\": \"\\u041c\\u0430\\u043a\\u0430\\u0440\\u043e\\u043d\\u044b \\\"\\u041f\\u0451\\u0440\\u044b\\u0448\\u043a\\u043e\\\": Order 0\"}}, {\"added\": {\"name\": \"ProductImage\", \"object\": \"\\u041c\\u0430\\u043a\\u0430\\u0440\\u043e\\u043d\\u044b \\\"\\u041f\\u0451\\u0440\\u044b\\u0448\\u043a\\u043e\\\": Order 0\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-05-29T11:38:28.786Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Бакалея",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-05-29T11:38:34.093Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Молочное",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-05-29T11:38:39.760Z",
+    "user": [
+      "dmitry"
+    ],
+    "content_type": [
+      "stock",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Мясо",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+}
+]

@@ -4,15 +4,12 @@ from django.shortcuts import render
 
 
 from django.contrib.auth import get_user_model
-from django.db.models import Count, Sum
-from django.http import FileResponse
+from django.db.models import F, Sum, FloatField, ExpressionWrapper
 from django.shortcuts import get_object_or_404
-from djoser.views import UserViewSet as UVS
 from rest_framework import permissions, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.response import Response
 
-# from api.filters import IngredientFilter, RecipeFilter
 from api.pagination import StandartPagination
 from api.permissions import (IsAuthorOrReadOnly, IsReadOnly, IsAuthenticated)
 from api.serializers import (CategorySerializer, ProductSerializer,
@@ -85,7 +82,64 @@ def get_product_detail(self, category_slug, subcategory_slug, product_slug):
 class ShoppingCartViewSet(viewsets.ModelViewSet):
     """ShoppingCart viewset."""
 
-    queryset = ShoppingCart.objects.all()
     serializer_class = ShoppingCartSerializer
-    permission_classes = (permissions.AllowAny,) # (IsAuthenticated,)
+    permission_classes = (permissions.IsAuthenticated,)
     pagination_class = StandartPagination
+
+    def get_queryset(self):
+        """Get queryset for ShoppingCart viewset."""
+        user = self.request.user
+        return ShoppingCart.objects.filter(user=user)
+
+    def perform_create(self, serializer):
+        """Add product to cart."""
+        user = self.request.user
+        product = serializer.validated_data['product']
+        quantity = serializer.validated_data.get('quantity', 1)
+
+        cart_item, created = ShoppingCart.objects.get_or_create(
+            user=user,
+            product=product,
+            defaults={'quantity': quantity}
+        )
+        if not created:
+            cart_item.quantity += quantity
+            cart_item.save()
+        serializer.instance = cart_item
+
+    def update(self, request, *args, **kwargs):
+        """Edit quantity of product in cart."""
+        partial = kwargs.pop('partial', False)
+        instance = self.get_object()
+        serializer = self.get_serializer(instance, data=request.data,
+                                         partial=partial)
+        serializer.is_valid(raise_exception=True)
+        instance.quantity = serializer.validated_data.get('quantity',
+                                                          instance.quantity)
+        instance.save()
+        return Response(self.get_serializer(instance).data)
+
+    @action(detail=False, methods=['get'], url_path='summary')
+    def cart_summary(self, request):
+        """Get summary of cart."""
+        cart_items = self.get_queryset()
+        total_quantity = (cart_items.aggregate(total=Sum('quantity'))['total']
+                          or 0)
+        total_price = cart_items.annotate(
+            item_total=ExpressionWrapper(F('quantity') * F('product__price'),
+                                         output_field=FloatField())
+        ).aggregate(sum=Sum('item_total'))['sum'] or 0
+
+        serializer = self.get_serializer(cart_items, many=True)
+        return Response({
+            'items': serializer.data,
+            'total_quantity': total_quantity,
+            'total_price': round(total_price, 2)
+        }, status=status.HTTP_200_OK)
+
+    @action(detail=False, methods=['delete'], url_path='clear')
+    def clear_cart(self, request):
+        """Clear cart."""
+        self.get_queryset().delete()
+        return Response({'message': 'Корзина очищена'},
+                        status=status.HTTP_204_NO_CONTENT)

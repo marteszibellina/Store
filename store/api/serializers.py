@@ -17,15 +17,6 @@ from stock.constants import (CATEGORY_NAME_LENGTH, CATEGORY_SLUG_LENGTH,
 User = get_user_model()
 
 
-class CategorySerializer(serializers.ModelSerializer):
-    """Serializer for Category model."""
-
-    class Meta:
-        """Meta class for CategorySerializer."""
-        model = Category
-        fields = ('name', 'slug', 'image',)
-
-
 class ProductImageSerializer(serializers.ModelSerializer):
     """Serializer for ProductImage model."""
 
@@ -60,16 +51,30 @@ class SubCategorySerializer(serializers.ModelSerializer):
         fields = ('name', 'slug', 'image', 'category', 'products',)
 
 
+
+class CategorySerializer(serializers.ModelSerializer):
+    """Serializer for Category model."""
+
+    subcategories = SubCategorySerializer(many=True, read_only=True,)
+
+    class Meta:
+        """Meta class for CategorySerializer."""
+        model = Category
+        fields = ('name', 'slug', 'image', 'subcategories',)
+
+
 class ShoppingCartSerializer(serializers.ModelSerializer):
     """Serializer for ShoppingCart model."""
 
     user = serializers.ReadOnlyField(source='user.username')
-    product = serializers.ReadOnlyField(source='product.name')
+    product_name = serializers.ReadOnlyField(source='product.name')
+    product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
     price = serializers.DecimalField(source='product.price',
-                         max_digits=PRODUCT_PRICE_MAX_DIGITS,
-                         decimal_places=PRODUCT_PRICE_DECIMAL_PLACES)
+                                     max_digits=PRODUCT_PRICE_MAX_DIGITS,
+                                     decimal_places=PRODUCT_PRICE_DECIMAL_PLACES,
+                                     read_only=True)
 
     class Meta:
         """Meta class for ShoppingCartSerializer."""
         model = ShoppingCart
-        fields = ('user', 'product', 'quantity', 'price',)
+        fields = ('id', 'user', 'product', 'product_name', 'quantity', 'price')

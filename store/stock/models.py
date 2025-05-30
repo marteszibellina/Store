@@ -38,7 +38,8 @@ class SubCategory(models.Model):
     slug = models.SlugField(max_length=CATEGORY_SLUG_LENGTH,
                             unique=True)
     image = models.ImageField(upload_to='subcategory/images',)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE,
+                                 related_name='subcategories')
 
     def __str__(self):
         """Return subcategory name."""
