@@ -34,8 +34,8 @@
 1. **Клонируйте репозиторий:**
 
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/marteszibellina/Store.git
+cd Store
 ```
 
 2. **Создайте и активируйте виртуальное окружение:**
